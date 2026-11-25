@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Golden Honey | น้ำผึ้งธรรมชาติ</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: #fffaf0;
+    color: #4b3218;
+}
+
+header {
+    background: #5b3715;
+    color: white;
+    padding: 20px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffd76a;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hero {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #f8df9c, #fff4d8);
+}
+
+.hero h1 {
+    font-size: 40px;
+    color: #704514;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    display: inline-block;
+    background: #9c671b;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+}
+
+.products {
+    padding: 50px 8%;
+    text-align: center;
+}
+
+.products h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.product-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.product {
+    background: white;
+    border-radius: 15px;
+    padding: 20px;
+    width: 280px;
+    box-shadow: 0 4px 12px #00000012;
+}
+
+.product img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product h3 {
+    margin: 15px 0;
+}
+
+.price {
+    color: #b77919;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 12px;
+}
+
+.product button {
+    background: #8b5a19;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.about {
+    background: #f3e4c3;
+    padding: 40px 10%;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer {
+    background: #5b3715;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    header {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 8px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🍯 Golden Honey</div>
+    <nav>
+        <a href="#home">หน้าแรก</a>
+        <a href="#products">สินค้า</a>
+        <a href="#about">เกี่ยวกับเรา</a>
+        <a href="#contact">ติดต่อ</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <h1>Golden Honey</h1>
+    <p>น้ำผึ้งธรรมชาติ หอมหวานจากธรรมชาติ ส่งตรงถึงคุณ</p>
+    <a href="#products" class="btn">เลือกซื้อสินค้า</a>
+</section>
+
+<section class="products" id="products">
+    <h2>🍯 สินค้าของเรา</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1587049352851-8d4e89133924?auto=format&fit=crop&w=600&q=80" alt="น้ำผึ้งธรรมชาติ">
+            <h3>SKU: HN-001</h3>
+            <h3>น้ำผึ้งธรรมชาติ Original</h3>
+            <p>น้ำผึ้งสีทอง หอมหวาน เหมาะสำหรับรับประทานและผสมเครื่องดื่ม</p>
+            <div class="price">159 บาท</div>
+            <button onclick="order('HN-001 น้ำผึ้งธรรมชาติ Original 159 บาท')">สั่งซื้อสินค้า</button>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1471943311424-646960669fbc?auto=format&fit=crop&w=600&q=80" alt="น้ำผึ้งขวด">
+            <h3>SKU: HN-002</h3>
+            <h3>น้ำผึ้ง Premium Gold</h3>
+            <p>น้ำผึ้งพรีเมียม รสชาติละมุน เหมาะเป็นของฝากและของขวัญ</p>
+            <div class="price">259 บาท</div>
+            <button onclick="order('HN-002 น้ำผึ้ง Premium Gold 259 บาท')">สั่งซื้อสินค้า</button>
+        </div>
+
+    </div>
+</section>
+
+<section class="about" id="about">
+    <h2>เกี่ยวกับ Golden Honey</h2>
+    <p>
+        เราคัดสรรน้ำผึ้งคุณภาพดีจากธรรมชาติ
+        เพื่อมอบความหอมหวานและประสบการณ์ที่ดีให้กับลูกค้า
+        ใส่ใจทุกขวด เพื่อให้คุณได้รับสินค้าที่มีคุณภาพ
+    </p>
+</section>
+
+<section class="contact" id="contact">
+    <h2>สนใจสั่งซื้อสินค้า</h2>
+    <p>เลือกสินค้าที่คุณชื่นชอบ แล้วกดสั่งซื้อได้เลย</p>
+    <p>📞 ติดต่อร้าน: 099-999-9999</p>
+    <p>📱 Facebook: Golden Honey</p>
+</section>
+
+<footer>
+    <p>© 2026 Golden Honey | น้ำผึ้งธรรมชาติ</p>
+</footer>
+
+<script>
+function order(product) {
+    alert("คุณเลือกสินค้า: " + product + "\nกรุณาติดต่อร้านเพื่อยืนยันคำสั่งซื้อ");
+}
+</script>
+
+</body>
+</html>
